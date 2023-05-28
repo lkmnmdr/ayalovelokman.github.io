@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Love Messages</title>
+  <style>
+    body {
+      background-color: #f7f7f7;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 40px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      margin-top: 100px;
+    }
+
+    .message {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #ff407e;
+    }
+
+    img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+
+    button {
+      background-color: #ff407e;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 18px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 10px;
+    }
+
+    button:hover {
+      background-color: #ff2f6e;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <p class="message" id="message1">Hey babe</p>
+    <img src="3.jpg" id="image1">
+    <button onclick="showSecondMessage()">Hey honey</button>
+  </div>
+
+  <script>
+    function showSecondMessage() {
+      document.getElementById("message1").textContent = "I miss you";
+      document.getElementById("image1").src = "2.jpg";
+
+      var button1 = document.createElement("button");
+      button1.textContent = "Thanks";
+      button1.onclick = function() {
+        document.getElementById("message1").textContent = "I said I miss you";
+      };
+
+      var button2 = document.createElement("button");
+      button2.textContent = "I miss you too";
+      button2.onclick = function() {
+        document.getElementById("message1").textContent = "So I want to tell you that I love you so much and I will do my best to see your happiness. I want you to know that all my work is to see you as my wife, and we have happy kids and the entry of Real Madrid in our wedding. I wish there were more words than 'I love you' to say, but there are not. So I wish you luck, my sweetheart ❤️";
+        document.getElementById("image1").src = "1.jpg";
+      };
+
+      var container = document.querySelector(".container");
+      container.appendChild(button1);
+      container.appendChild(button2);
+    }
+  </script>
+</body>
+</html>
